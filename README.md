@@ -4,7 +4,7 @@
 Projecte de catàleg de videojocs desenvolupat amb Django.
 
 ## Instal·lació
-1. Clonar el repositori.
+1. Clonar el repositori.`git clone https://github.com/alexnavarro1/projecte_django.git`
 2. Instal·lar les dependències: `pip install -r requirements.txt`.
 3. Executar les migracions: `python manage.py migrate`.
 
