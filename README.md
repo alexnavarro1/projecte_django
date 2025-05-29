@@ -26,4 +26,6 @@ Si vols probar el tests pots fer:
 ## GitHub Actions
 Fitxer de CI ubicat a `.github/workflows/test.yml`.
 
-## Enllaços
+## Documentació Generada Enllaços
+- [models.py](https://htmlpreview.github.io/?https://github.com/alexnavarro1/projecte_django/blob/main/docs/videojuegos.models.html)
+- [views.py](http://htmlpreview.github.io/?https://github.com/alexnavarro1/projecte_django/blob/main/docs/videojuegos.views.html)
