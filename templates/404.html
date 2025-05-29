@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="welcome-section" id="error-title">
+    <h2>Error 404 - Pàgina no trobada</h2>
+</div>
+
+<section class="error-message">
+    <p>Ho sentim, la pàgina que busques no existeix o no té un slug assignat.</p>
+    <a href="{% url 'index' %}" class="btn">Tornar a l'inici</a>
+</section>
+{% endblock %}

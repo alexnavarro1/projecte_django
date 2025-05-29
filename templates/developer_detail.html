@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="developer-detail">
+  <h1>{{ developer.name }}</h1>
+  <p class="developer-bio">{{ developer.bio }}</p>
+
+  <h2>Jocs desenvolupats</h2>
+  <div class="games-list">
+    {% for game in developer.games.all %}
+    <div class="card">
+      <h3><a>{{ game.title }}</a></h3>
+      <p>{{ game.description|truncatewords:15 }}</p>
+      <a href="{% url 'games-detail' game.slug %}" class="btn">Més info</a>
+    </div>
+    {% empty %}
+    <p>Aquest desenvolupador no té jocs disponibles.</p>
+    {% endfor %}
+  </div>
+</section>
+{% endblock %}

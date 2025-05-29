@@ -1,0 +1,25 @@
+{% extends "base.html" %} 
+{% load static %}
+
+{% block content %}
+<section class="recent-games">
+    <h2 class="center-title">Els darrers videojocs</h2>
+    <div class="game-container">
+        {% for game in games %}
+        <div class="card">
+            <img src="{{ game.image.url }}" alt="{{ game.title }}" class="card-image">
+            <h3>{{ game.title }}</h3>
+            <p>Data de llançament: {{ game.release_date }}</p>
+            <p>{{ game.description|truncatewords:20 }}</p>
+            <a href="{% url 'games-detail' game.slug %}" class="btn">Més informació</a>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+<section class="videojocs-info">
+    <h2>Sobre els videojocs</h2>
+    <p>Els videojocs són una forma d'entreteniment interactiva que combina gràfics, so, història i jugabilitat per oferir experiències immersives. Han evolucionat des de jocs simples fins a mons virtuals complexos.</p><br>
+    <p>La indústria dels videojocs és una de les més grans del món, amb milions de jugadors i desenvolupadors a tot arreu. A través d'aquest portal podràs descobrir nous jocs, gèneres i desenvolupadors que marquen tendència.</p>
+</section>
+{% endblock %}

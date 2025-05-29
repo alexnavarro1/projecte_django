@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8"> 
+    <title>Videojocs</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <!-- Menú -->
+    <nav>
+        <a href="{% url 'index' %}">Inici</a> |
+        <a href="{% url 'games-list' %}">Jocs</a> |
+        <a href="{% url 'developers-list' %}">Desenvolupadors</a> |
+        <a href="{% url 'genres-list' %}">Gèneres</a>
+    </nav>
+
+    <!-- Banner -->
+    <header id="banner">
+        <img src="{% static 'imatges/banner.jpg' %}" alt="Banner">
+    </header>
+
+    <!-- Títol -->
+    <header id="main-title">
+        <h1>Benvingut al lloc de Videojocs</h1>
+        <p>Explora jocs, gèneres i desenvolupadors!</p>
+    </header>
+
+    <!-- Contingut dinàmic -->
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Peu de pàgina -->
+    <footer class="footer">
+        <p>&copy; Àlex Navarro - Projecte Django</p>
+    </footer>
+</body>
+</html>

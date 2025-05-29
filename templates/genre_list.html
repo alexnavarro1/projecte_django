@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="genres-list">
+  <h1>Géneros</h1>
+  <div class="button-container">
+    {% for genre in genres %}
+    <a href="{% url 'genre-games' genre.slug %}" class="btn genre-btn">{{ genre.name }}</a>
+    {% endfor %}
+  </div>
+</section>
+{% endblock %}

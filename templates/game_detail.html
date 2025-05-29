@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="game-detail">
+    <div class="card">
+        {% if game.image %}
+        <img src="{{ game.image.url }}" alt="{{ game.title }}" class="card-image">
+        {% endif %}
+        <div class="centered-content">
+            <h2>{{ game.title }}</h2>
+            <p>{{ game.description }}</p>
+            <p><strong>Preu:</strong> {{ game.price }} €</p>
+            <p><strong>Data de llançament:</strong> {{ game.release_date }}</p>
+            <p><strong>Desenvolupador:</strong> 
+                <a href="{% url 'developers-detail' game.developer.slug %}">{{ game.developer.name }}</a>
+            </p>
+            <p><strong>Gèneres:</strong>
+                {% for genre in game.genres.all %}
+                    <a href="{% url 'genre-games' genre.slug %}" class="btn">{{ genre.name }}</a>
+                {% endfor %}
+            </p>
+        </div>
+    </div>
+</section>
+{% endblock %}

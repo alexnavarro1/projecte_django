@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="recent-games">
+    <h2 class="center-title">Videojocs del gènere: <span style="color: #6f6b6f;">{{ genre.name }}</span></h2>
+    {% if games %}
+    <div class="game-container">
+        {% for game in games %}
+        <div class="card">
+            <img src="{{ game.image.url }}" alt="{{ game.title }}" class="card-image">
+            <h3>{{ game.title }}</h3>
+            <p>Data de llançament: {{ game.release_date }}</p>
+            <p>{{ game.description|truncatewords:20 }}</p>
+            <a href="{% url 'games-detail' game.slug %}" class="btn">Més informació</a>
+        </div>
+        {% endfor %}
+    </div>
+    {% else %}
+    <p>No hi ha videojocs disponibles per aquest gènere.</p>
+    {% endif %}
+</section>
+{% endblock %}

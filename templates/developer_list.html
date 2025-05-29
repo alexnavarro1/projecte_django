@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="developers-list">
+    <h1>Desenvolupadors</h1>
+    <div class="developer-container">
+        {% for dev in developers %}
+        <div class="card developer-card">
+            <h3>{{ dev.name }}</h3>
+            <a href="{% url 'developers-detail' dev.slug %}" class="btn">Veure jocs</a>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}
