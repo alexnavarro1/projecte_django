@@ -1,9 +1,11 @@
-# Projecte Django de Videojocs - Àlex Navarro Martinez
+# 📦 Projecte Django de Videojocs - Àlex Navarro Martinez
 
-## Introducció
-Projecte de catàleg de videojocs desenvolupat amb Django.
+## 🎮 Introducció
+Aquest projecte és un catàleg de videojocs desenvolupat amb Django. Permet gestionar una biblioteca digital amb informació detallada sobre cada joc, els seus desenvolupadors i les etiquetes associades.
 
-## Instal·lació
+## 🛠️ Instal·lació
+Segueix aquests passos per posar el projecte en marxa:
+
 1. Clonar el repositori.
 `git clone https://github.com/alexnavarro1/projecte_django.git`
 
@@ -13,19 +15,23 @@ Projecte de catàleg de videojocs desenvolupat amb Django.
 3. Executar les migracions.
 `python manage.py migrate`
 
-## Execució
-Per probar la seva execució necesites fer:
+## 🚀 Execució del projecte
+Per iniciar el servidor local de desenvolupament, utilitza:
 `python manage.py runserver`  
 
-Visitar http://127.0.0.1:8000/ per accedir-hi.
+Després, obre el navegador i visita:
+`http://127.0.0.1:8000/`
 
-## Tests
+## 🧪 Execució de tests
 Si vols probar el tests pots fer:
 `python manage.py test`
 
-## GitHub Actions
+## 🔄 Integració contínua (CI)
+Aquest projecte utilitza GitHub Actions per automatitzar proves.
+
 Fitxer de CI ubicat a `.github/workflows/test.yml`.
 
-## Documentació Generada Enllaços
+📚 Documentació generada
+Visualitza la documentació HTML generada automàticament:
 - [models.py](https://htmlpreview.github.io/?https://github.com/alexnavarro1/projecte_django/blob/main/docs/videojuegos.models.html)
 - [views.py](http://htmlpreview.github.io/?https://github.com/alexnavarro1/projecte_django/blob/main/docs/videojuegos.views.html)
